@@ -1,0 +1,287 @@
+/*    
+                             СЕЛЕКТОРИ ТЕГІВ, СВОЙСТВА, ЗНАЧЕННЯ
+
+#          id        = Унікальний в середині однієї сторінки, бажано приміняти для одного тега
+.          Class     = Не унікальній, може примінятися до різних тегів
+img[title]           = буде примінений тільки до img в якого є атрибут title
+p.main               = приміняється тільки для елементів p в класі main
+p.main strong a      = відноситься тільки до того де останій елемент (а) буде вложений у всі попередні елементи (p.main strong)
+p.main strong > a    = відноситься тільки до первого елементу чи групи елеметів(а) на цьму рівні, з усих вложених елементів(p.main strong )
+p.main em + a        = приміняється до (em) і наступного елементу (а) якщо він (а), які ідуть після (p.main)
+h1,h3,p              = через кому групуються селектои які мають спільні властивості, потм кожному окремо прописуються відміні
+*{}                  = приміняє властивості для всіх елементів на сторінці  можна записати і так   li*  -  тепер для всіх списка
+
+
+
+width       - ширина
+height      - висота
+
+                            ПРІОРИТЕТ В ПОВТОРЮВАННІ СТИЛЯ
+							
+!important            = перший пріоритет має той стиль де у властивостях прописаний (!important )
+<p color="green">       = стиль прописаний в html приорітетніший ніж в CSS файлах
+
+								
+								
+                                ОДИНИЦІ ВИМІРЮВАННЯ
+px     = піксели
+%      = відсотки
+em     = висота поточного шрифту ( 1.0 )
+ex     = висота літери х
+
+cm     = сантиметри
+mm     = міліметри
+in     = дюйми
+pt     = пункт (1/72 дюйма)
+pc     = піка  (12 пунктів)
+
+                                    КОЛЬОРИ
+red, green... і тд.  - іменовані
+255 255 255          - rgb
+#FFAN01              - шіснадцятирічний RGB
+    
+
+                                   БЕКГРАУНД
+backgraund-color:#ffo;                                         кольор
+backgraund-image:url   (img/foto.jpg);                         картинка 
+backgraund-position:top   (bottom  left  right  %)             вирівнювання
+backgraund-repeat:repeat-x   (repeat-y   no-repeat)            патерн
+backgraund-attachment:fixed                                    фіксація при скролі
+
+backgraund: #ffo url top repeat-x fixed   Спрощений запис  але тільки в такому порядку
+
+                                     ОБВОДКА border
+border-color:red;  (RGB)                                       колір
+border-style:solid;  (dotted  double  inset  outset)           стиль (пунктирна )
+border-radius:5px;   (10px 5px; 10px/5px; 10px 5px 10px 5px;;) заокруглення
+border-width:1px;              - вся рамка одной товщини       розмір            
+            :1px 2px;          - 1 верхня і нижня, 2 ліва і права
+			:1px 2px 3px;      - 1 вершня, 2 ліва і права, 3 нижня
+			:1px 2px 3px 4px;  - 1 верхня, 2 права, 3 нищня, 4 ліва
+			
+border: 1px solid black;          Спрощенный запис
+
+border-left:1px solid red      - можна кожному боку задавать окремі значення параметрів
+                    
+
+                                    РАМКА padding
+                                    
+padding:20px;
+
+
+
+                                     ОБТІКАННЯ float
+
+
+float: left | right | none | inherit |          обтікання ліве, праве, відміння float, наслідує батьківскі значення
+clear:left | right |both | none;                     анулює обтікання з ліва, з права, відмінна оптікання, відмінна clear
+                                                                   
+
+                                      ВІДСТУП margin
+
+                                Все як у border і padding
+marin:0 auto;                  auto по равому і лівому - вирівнює по центру
+                                     
+
+
+                                    position
+
+position: absolute | fixed | relative | static | sticky   
+          left, top, right и bottom     
+
+
+                                     z-index 
+
+z-index: <число> | auto
+
+
+                                    display
+
+
+                                      ШРИФТ   
+font{
+	font-family:"Times New Roman",serif,Verdana;      
+	font-style: italic;          
+	font-variant: small-caps;    
+	font-weight: 600;            
+	font-size: 11pt;
+
+ скорочений запис обовязкова послідовнысть та розмір і сім	я
+	font:italic  small-caps 600 12px Verdana;
+}
+
+
+
+									  ТЕКСТ
+
+text-align:center;  (justify  left  right)                                   вирівнюваня тексту
+text-decoration:none;   (blink   line-through  overline  underline )        риска
+text-transform:capitalize;   (lowercase  uppercase)                         регістр
+text-indent:20px;                                                           Абзац
+letter-spacing:-5px;                                                        міжбуквений інтервал       
+word-spacing:10px;                                                          міжсловний  інтервал
+line-height:140%;                                                           міжрядковий інтервал
+vertical-align:sub;        (super)                                          Вирівнюєелемент по вертикалі (заміна sup sub )
+white-space
+
+
+			                      МАРКЕР СПИСКА   ?
+								 
+list-style{
+	list-style-type:circle; (disc,square,armenian,decimal, lover(upper)-alpha... )    
+	list-style-position:inside; (outside)                      
+	list-style-image:url(img/list.png);
+	list-style: none;
+	
+}	
+
+								
+								
+                               ПСЕВДОКЛАСИ ПСЕВДОЕЛЕМЕНТИ (:)  a:hover 
+						   
+ :hover                    - при наведенні курсора на силку з псевдокласом(:hover ) відобразиться стилі прописанні для нього
+ :active                   - при активації елемента
+ :focus                    - при отриманні фокуса елемента
+ :link                     - не відвідуванні силки
+ :visited                  - відвідуванні силки
+ 
+ :first-child         = звернення до першого дочерного елемента напиклад в списках(li:first-child)				
+ :last-child,
+ :nth-child(),
+ :nth-of-type(),
+ strong:leng(en)      = приміняеться тільки для конкретной мови в (ru ua...) в середині тегів (strong p ...) <strong lang="en">     
+ a:link:hover         = обьєднання стилів до елемента(а) повторюємих псевдокласів (:link:hover)
+				
+ :first-leter               - стиль для першого символу. Наприклад перша літера в параграфах
+ :first-line                - стиль до першого рядка
+ :after                     - стиль для елементів в кінці. Наприклад в кінці параграфа рамка 
+ :before                    - стиль для елементів на початку.
+
+
+
+                              ТАБЛИЦЯ
+
+nth-child()                 
+
+
+
+                                                 Пройти : Дочерні селектори
+														: Пріоритети
+														: Псевдоелементи
+*/
+body{
+	background-color: #F1F1F1;
+}
+textarea{
+	background-color: #F6F9F9;
+}
+h1{
+	color: red;
+	text-align: center;
+	
+}
+
+h2{
+	color: #007700;
+	text-align: center;
+}
+table{
+	border: 2px;
+	color: black;
+
+}
+
+
+
+a{
+	text-decoration: none;
+}
+
+                              /*table*/
+
+	table {
+		width: 50%;
+		border-collapse: collapse;
+	}
+	caption{
+		font-size: 25px; 
+	}
+	tr:nth-child(odd) {
+		 background: #f0f0f0; 
+	} 
+	tr:nth-child(even) {
+		background: #ddd; /* Цвет фона */
+	
+	} 
+	 th {
+		background: black;
+		color:white;
+	}  
+tfoot{
+	background: black;
+	color:red;
+} 
+
+thead{
+	color: green;
+} 
+#table2 tbody{
+	background: red;
+	color: #2693E6
+}           
+iframe{
+	width: 50%;
+}
+
+span{
+	border: 1px solid black;
+	background: white;
+}
+
+
+#red1{
+	background:red;
+	width:150px;
+	height:150px;
+	font-size: 32px;
+	text-align: center;
+	position: absolute;
+}
+
+#red2{
+	background:#E28E8E;
+	width:150px;
+	height: 150px;
+	font-size: 22px;
+	text-align: center;
+	position: relative;	
+	top:100px;left:100px
+
+}
+
+#grey{
+	background:grey;
+
+	width:150px;
+	height: 150px;
+	font-size: 22px;
+	text-align: center;
+	position: relative;
+}
+#pink{
+	background:pink;
+	width:150px;
+	height: 150px;
+	font-size: 22px;
+	text-align: center;	
+	position: relative;	
+	top:100px;left:100px
+}
+#yellow{
+	background:yellow;
+	width:150px;
+	height: 150px;
+	font-size: 32px;
+	text-align: center;
+
+}

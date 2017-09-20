@@ -1,0 +1,539 @@
+<!-- 
+                             ТЕГ АТРИБУТ ЗНАЧЕННЯ
+id            На сторінці може бути тільки один     
+class         Може багато раз використовуватись на сторінці
+
+
+
+ -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<title> Шпаргалка</title>
+		<link rel="stylesheet" href="style.css">
+        
+
+	</head>
+
+	<body>
+
+		<h1>Шпаргалка HTML (Заголовок H1)  </h1>
+		<h2>Теги  head. Заголовок H2 </h2>
+
+		<p>base - </p>
+        <p>style - підклюнняче стилів з html файла</p>
+
+		<p>p - Параграф
+		<br>
+		<!--выдносна силка
+		 повернутись на поверх вище  ../ папка/ файл
+		  -->
+		<a href="#">a - Силка</a> <br>
+	    <a href="#a1"># - Якорь по ID  (Росшифровка HTML тегів)</a><br>
+	    <a href="mailto:qqqq@gmail.com">mailto:*****@gmail.com - Почтовий сервер </a><br>
+	    
+	    <figure>
+			<figcaption> img прописаний в контейнері figure з верхнім написом -  figcaption </figcaption>
+	    	<img src="img/css_1.jpg" alt="Альтернативний текст" title="title -Напис при наведенні" >  img з альтернативним текстом -alt<br>
+	    	<figcaption>Нижній напис під figcaption</figcaption>
+	    </figure>>
+
+		<b>b -Жирний текст</b>
+	    <br>
+		
+		<strong>strong - Важность </strong>
+		<br>
+		
+		<i>i - Курсив</i><br>
+		
+		
+		<em>em - Акцент</em><br>
+		
+		
+		<u>u - Підчеркнутий</u><br>
+		 
+		
+		s - <s>  Зачеркнутий</s> 
+		
+		
+		<blockquote>
+			blockqvote - Якась цитата  
+		</blockquote>
+		
+		<q> q - Кавички</q><br><q lang="ru">Кавички з атрибутом q lang="ru" </q><br>
+
+		<img src="#" alt="img - Фото"><br>
+
+		<!-- <object>  <embed> -->
+       
+		<div>div - контейнер для групування</div>
+		<p><span>span</span> аналог div тілики в строкових елементах</p>
+
+        <h3>select</h3>
+		<select name="sel" 
+		>
+		 <!-- size="1" -  видимість кількості оптинов  multiple - вибір більш ніж одного елемента -->
+			<option disabled > option  2 option disabled впливає на вибір </option>
+			<option value="1"> option  3 option value значення яке відправиться на сервер </option>
+			<option selected="1"> option  1 option  selected="1" за умовчанням</option> 
+		</select><br>
+
+		<select name="sel">
+		 
+			<optgroup label="optgroup label">
+				<option>Підгрупа 1</option>
+				<option> Підгрупа 2</option>
+			</optgroup>
+			<option> група 2</option> 
+		</select>
+		<h3>iframe</h3>
+		<p>
+			<a href="frame/iframe.html" target="fram"><b>Атребути</b></a>
+			<a href="frame/iframe_lorem.html" target="fram"><b>Lorem</b></a>
+			<a href="frame/iframe_lorem_ru.html" target="fram"><b>Риба</b></a>
+		</p>
+		<iframe src="frame/iframe.html" name="fram"></iframe><br><br>
+		<h3>textarea</h3>
+		<textarea placeholder="textarea" cols="98" rows="5" >
+		          textarea
+placeholder -Для відображення тексту<br>
+accesskey   -Переход к полю с помощью сочетания клавиш.<br>
+autofocus   -Автоматическое получение фокуса.<br>
+cols        -Ширина поля в символах.<br>
+disabled    -Блокирует доступ и изменение элемента.<br>
+form        -Связывает текстовое поле с формой по её идентификатору.<br>
+maxlength   -Максимальное число введенных символов.<br>
+name        -Имя поля, предназначено для того, чтобы обработчик формы мог его идентифицировать.<br>
+readonly    -Устанавливает, что поле не может изменяться пользователем.<br>
+required    -Обязательное для заполнения поле.<br>
+rows        -Высота поля в строках текста.<br>
+tabindex    -Порядок перехода между элементами при нажатии на клавишу Tab.<br>
+wrap        -Параметры переноса строк."  cols="50" rows="5" <br>
+				
+		</textarea>
+
+		<fieldset>
+			<legend>legend -  текст виводу</legend>
+				fieldset основний контейнер<br><br> fieldset <br>legend legend <br> fieldset
+		</fieldset><br>
+		
+		
+		                                              <!-- Inut -->
+		<h2> input елементи form </h2>
+		
+
+		<!-- Всі елементи в form поміщювати в label -->
+		<form action="">
+		<fieldset>
+		<label>
+		Всі елементи в form поміщювати в label <br>
+		Всім елемнтам давати name<br>
+		</label><br>
+		<!-- checked вибраний флажок за умовчанням  -->
+		<input type="radio" name = "r1" checked="" > Radio1
+		<input type="radio" name = "r1" > Radio2<br><br>
+		
+		
+		<input type="checkbox" name="ch" checked="">Chek
+		<input type="checkbox" name="ch1">Box<br><br>
+		<input type="email" value="input type=email" "><br><br>
+
+		<input type="password" size="24" placeholder=" input type='password'" name="p" ><br><br>
+		
+		<input form="input_f" list="prog"><br><br>
+		<datalist id="prog">
+			<option>html</option>
+			<option>php</option>
+			<option>pithon</option>
+			<option>ruby</option>
+			<option>c#</option>
+		</datalist>
+		
+		<input type="text" size= "75" value="input type=text, а value це відобража" placeholder = "input type='text' в placeholder" name="t" required="required обов'язкове заповнення поля><br><br>
+
+
+		<input type="number" name="age" min="-0.9" max="104" value="24">input type=number<br> <br>
+		
+		<input type="range" name="scrol" min="-0.9" max="104" value="24">input type=range<br><br>
+
+		<input type="date" value=""><br><br>
+
+		<input type="color"><br><br>
+
+		<input type="date" value=""><br><br>
+
+
+
+		<input type="submit" value = " submit Зберегти " >
+		
+		<input type="reset" value="reset Скинути" >
+		
+		<input type="button" value = "button" >
+
+		<br><br>
+		
+		<input type="file">
+		<br>
+		
+		<input type="image" alt="Якесь Фото" >
+		<br><br>
+		
+		<input type="image" src="img/Button.png" name="b" title="input type image""><br>
+		<h3>input type "" В html5</h3>
+		<select name="input_type" id=""> input type "" В html5
+			<optgroup>
+				<option>color	Виджет для выбора цвета.</option>
+				<option>date	Поле для выбора календарной даты.</option>
+				<option>datetime	Указание даты и времени.</option>
+				<option>datetime-local	Указание местной даты и времени.</option>
+				<option>email	Для адресов электронной почты.</option>
+				<option>number	Ввод чисел.</option>
+				<option>range	Ползунок для выбора чисел в указанном диапазоне.</option>
+				<option>search	Поле для поиска.</option>
+				<option>tel	Для телефонных номеров.</option>
+				<option>time	Для времени.</option>
+				<option>url	Для веб-адресов.</option>
+				<option>month	Выбор месяца.</option>
+				<option>week    Выбор недели.</option>
+			</optgroup>
+		</select>
+		</fieldset>
+		</form>
+
+		<button>button поза зоною form</button>
+	
+		                                  <!-- Списки	 -->
+
+		
+		<h2> Списки (Заголвок H2)</h2>
+		<h3>Маркерований список    ul li </h3>
+		                                           <!--  атрибути досписку  type = 'disk' 'circle' 'square'   вид маркера списка -->
+		<ul>
+			<li>Пункт №1</li>
+			<li>Пункт №2</li>
+			<li>Пункт №3</li>
+			<li>Пункт №4</li>
+		</ul>
+	
+		<h3>Нумерований список     ol li   </h3>
+		                                            <!-- атрибути досписку  type = 'a' 'A' 'i' 'I' '1'  вид маркера списка
+		                                                               reversed     відтворює списки в зворотньому порядку
+		                                                               start = '3'    задає номер, чи номер літери початку відліку  списку
+		                                                     поєднання двух атреутів  <ol type="I" start="4"> -->
+
+		<ol>                                     
+			<li><b>li</b> Пункт №1</li>
+			<li><b>li</b> Пункт №2</li>
+			<li><b>li</b> Пункт №3</li>
+			<li><b>li</b> Пункт №4</li>
+		</ol>
+
+
+        <h3>Визначенній список    dl dt dd </h3>
+		
+		<dl>
+			<dt><b>dt</b> Пункт №1</dt>
+			 <dd><b>dd</b> Підпункт 1</dd>
+			<dt><b>dt</b> Пункт №2</dt>
+			 <dd><b>dd</b> Пункт 1</dd>
+			 <dd><b>dd</b> Пункт 2</dd>
+			 <dd><b>dd</b> Пункт 3</dd>
+			<dt><b>dt</b> Пункт №3</dt>
+			 <dd><b>dd</b> Підпункт 1</dd>
+		</dl>
+		
+		
+		<h3>Вбудовані списки   ol li  li </h3>
+		<ol>
+			<li><b>li </b>Пункт №1</li>
+			<li><b> li </b>Пункт №2</li>
+			<ul>
+				<li><b>li </b>Пункт №3</li>
+				<li><b>li </b>Пункт №4</li>
+				<ul>
+					<li> <b>li </b>Пункт №5</li>
+					<li> <b>li </b>Пункт №6</li>
+					<li> <b>li </b>Пункт №7</li>
+					<li> <b>li </b>Пункт №8</li>
+				</ul>
+				<li> <b>li </b>Пункт №9</li>
+				<li> <b>li </b>Пункт №10</li>
+			</ul>
+			<li><b>li </b>Пункт №11</li>
+			<li><b>li </b>Пункт №12</li>
+		</ol>
+
+                                           <!-- Таблиці -->
+
+
+		<h2>Таблиці</h2>                             
+		<table id="table1">
+		<caption>
+			<b>table - таблиця,  tr - рядок,  td - колонки в рядку <br>caption - заголовок</b>
+			</caption> 
+			<tr>
+				<th colspan="4"> colspan - 1 ряд на всю таблицю </th>
+			</tr>
+			<tr>
+				<td>Колона №1 </td><td>Колона №2 </td><td rowspan="2">rowspan - колона<br> на декілька рядків  </td><td>Колона №4 </td>
+			</tr>
+			<tr>
+				<td>Колона №1/2 </td><td>Колона №2/2 </td><td>Колона №4/2 </td>
+			</tr>
+			<tr>
+				<td>Колона №1/3 </td><td>Колона №2/3 </td><td>Колона №3/3 </td><td>Колона №4/3 </td>
+			</tr>
+			<tr>
+				<td> Г </td> <td> <input type="radio" name = "r1" ></td><td> <input type="radio" name = "r1" ></td><td> <input type="radio" name = "r1" ></td>
+			</tr>
+			<tr>
+				<td>1</td><td>1</td><td>1</td><td>1</td>
+			</tr>
+			<tr>
+				<td>1</td><td>1</td><td>1</td><td>1</td>
+			</tr>
+			<tr>
+				<td>1</td><td>1</td><td>1</td><td>1</td>
+			</tr>
+			<tr>
+				<td>1</td><td>1</td><td>1</td><td>1</td>
+			</tr>
+			<tr>
+				<td>1</td><td>1</td><td>1</td><td>1</td>
+			</tr>
+		</table><br>			
+
+
+
+		<table id="table2">
+			<caption>thead tfoot tbody</caption>
+			<thead>
+				<tr>
+					<td>thead</td><td>1</td><td>1</td><td>1</td>
+				</tr>
+				<tr>
+					<td>thead</td><td>1</td><td>1</td><td>1</td>
+				</tr>
+			</thead>
+				<tr>
+					<td>td без контейнерів</td><td>2</td><td>2</td><td>2</td>
+				</tr>
+			<tfoot>
+				<tr>
+					<td>tfoot</td><td>3</td><td>3</td><td>3</td>
+				</tr>
+				<tr>
+					<td>tfoot</td><td>3</td><td>3</td><td>3</td>
+				</tr>
+				<tr>
+					<td>tfoot</td><td>3</td><td>3</td><td>3</td>
+				</tr>
+			</tfoot>
+			<tbody>
+				<tr>
+					<td>tbody</td><td>4</td><td>4</td><td>4</td>
+				</tr>
+				<tr>
+					<td>tbody</td><td>4</td><td>4</td><td>4</td>
+				</tr>
+			</tbody>
+		</table><br>			
+
+
+		
+			
+			
+		<h2> Спецсимволи (Заголвок H2)</h2>
+		
+		
+		Авторске право      &copy;
+		<br>
+		Одинарні кавички    &lt; &gt;
+		<br>
+		Двойні кавички      &laquo; &raquo;
+		<br>
+		Стрілки             &larr; &rarr;
+		<br>
+		Довге тире          &mdash;
+		<br>
+		Нероздільний &nbsp; пробіл  &nbsp;<br>
+		<h4><b>pre</b></h4>
+		<pre>
+	      
+				 -                -----  
+				 -----           |-----
+				||----|          ----||  
+				||-----         -----||  
+				||-----|       |-----||
+				|| -----       ------||
+				||- ----|     |------||
+				||---||--     -------||
+				||--|| --|   |-------||
+				|| -|| |--   --- - --||
+				|| -||  --|-|--| - ---|
+				|---||  |-----| |-----|
+				|---||   |----  |-----| 
+				|----|    ---   |-----|
+				|-----          ------| 
+				
+		</pre>
+		<h4><b>pre</b></h4>
+
+		<h3> Як пишуться формули (Заголвок H3)</h3>
+	
+		H<sub>2</sub>O - sub
+		<br>
+		E = MC<sup>2</sup> - sup
+		
+
+
+		<h2 id="a1">Расшифровка HTML тегов</h2>
+		<pre >
+			
+
+			B.......bold....................жирный
+			I   	italic	                курсив
+			EM......emphasis................акцент
+			U   	underline	        подчеркнутый
+			S.......strikethrough...........зачеркнутый
+			SUB 	subscript	        подстрочный индекс
+			SUP.....superscript.............надстрочный индекс
+			A   	anchor	                якорь (т.е., другая страница как бы "бросила якорь" на эту)
+			DIV.....division................раздел
+			SPAN 	span	                интервал
+			P.......paragraph...............абзац
+			PRE  	preformatted	        предварительно отформатированный
+			BR......break...................разрыв
+			HR  	horisontal rule	        горизонтальная черта
+			OL......ordered list............упорядоченный (нумерованный) список
+			UL  	unordered list      	неупорядоченный список
+			LI......list item...............пункт списка
+			DL  	definition list     	определение списка (терминов)
+			DT......definition term.........определение термина
+			DD  	definition description	определение описания (термина)
+			TABLE...table...................таблица
+			THEAD	table head	        заголовок таблицы
+			TBODY...table body..............тело таблицы
+			TR  	table row	        строка таблицы
+			TH......table header............заголовок таблицы (ячейка)
+			TD  	table data	        ячейка (данное) таблицы
+			TFOOT...table foot..............основание, "подвал" таблицы		
+		</pre>
+		<h2>Семантичні елементи HTML5</h2>
+		<table border="2">
+			<tr>
+				<td>header</td>
+				<td>Шапка</td>
+			</tr>
+			<tr>
+				<td>nav</td>
+				<td>Меню, Навігація</td>
+			</tr>
+			<tr>
+				<td>article</td>
+				<td>Статьї</td>
+			</tr>
+			<tr>
+				<td>section</td>
+				<td>Універсальний контейнер   Часто використовується як батьківський тег для atticle</td>
+			</tr>
+			<tr>
+				<td>aside</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>footer</td>
+				<td>Підвал</td>
+			</tr>
+			<tr>
+				<td>address</td>
+				<td>Для контактних даних</td>
+			</tr>
+			<tr>
+				<td>main</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>figure</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>figcaption</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>tine</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>mark</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>dbi</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Wbr</td>
+				<td></td>
+			</tr>
+			</table>
+		
+<h1>CSS приклади</h1>
+<div>
+	<div id="red1">position: absolute;</p></div>
+	
+	<div id="red2">position: relative;
+	top:100px;
+	left:100px;</div>
+</div><br>
+<div>
+	<div id="grey"> </div>
+	<div id="pink">position: relative;	
+	top:100px;
+	left:100px</div>
+</div>
+		<div id="yellow">5</div>
+</div>
+
+
+        <figure class="map map--large">
+            <img src="assets/images/contacts/contacts/mapd449.png?v=1502270942" alt="" />
+
+            <svg class="map-lines" xmlns="http://www.w3.org/2000/svg" width="198" height="106" viewBox="0 0 198 106">
+                <path class="map-line map-line--1" d="M107,35S62.857,4.857,24,22"/>
+                <path class="map-line map-line--2" d="M107,35s-2.143,43.286-62,48"/>
+                <path class="map-line map-line--3" d="M107,35s17.857,14.714,10,34"/>
+                <path class="map-line map-line--4" d="M106.9,34.916s28.13-.279,34.094-19.738"/>
+                <path class="map-line map-line--5" d="M107,35s35.286,1.286,70,26"/>
+                <path class="map-line map-line--6" d="M107,36s18.6-53.2,91-29"/>
+                <path class="map-line map-line--7" d="M106.9,34.916s47.487,5.861,60.544-17.838"/>
+                <path class="map-line map-line--8" d="M107,35S55.692,22.552,28.063,62.12"/>
+                <path class="map-line map-line--9" d="M107,35s28.5,14.1,15.378,50.019"/>
+                <path class="map-line map-line--10" d="M107,35S37.345,11.038,1.395,52.376"/>
+                <path class="map-line map-line--11" d="M107,36s37.429,5.235,46.588,37.775"/>
+                <path class="map-line map-line--12" d="M107,35s-5.537,65.58-66.8,70.555"/>
+                <path class="map-line map-line--13" d="M107,35s8.861,22.774-5.5,41.171"/>
+                <path class="map-line map-line--14" d="M107,36s36.048-29.384,72.94-4.773"/>
+            </svg>
+
+            <div class="map-dot map-dot--0"></div>
+            <div class="map-dot map-dot--1"></div>
+            <div class="map-dot map-dot--2"></div>
+            <div class="map-dot map-dot--3"></div>
+            <div class="map-dot map-dot--4"></div>
+            <div class="map-dot map-dot--5"></div>
+            <div class="map-dot map-dot--6"></div>
+            <div class="map-dot map-dot--7"></div>
+            <div class="map-dot map-dot--8"></div>
+            <div class="map-dot map-dot--9"></div>
+            <div class="map-dot map-dot--10"></div>
+            <div class="map-dot map-dot--11"></div>
+            <div class="map-dot map-dot--12"></div>
+            <div class="map-dot map-dot--13"></div>
+            <div class="map-dot map-dot--14"></div>
+        </figure>
+
+    </body>
